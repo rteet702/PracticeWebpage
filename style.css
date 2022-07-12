@@ -12,8 +12,8 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--curr-text-color);
 }
@@ -86,6 +86,7 @@ body {
 
 #display_mode {
     background-color: darkcyan;
+    font-size: 1vw;
 }
 
 .sidebar {

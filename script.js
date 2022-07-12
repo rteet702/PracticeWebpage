@@ -1,11 +1,11 @@
 var darkMode = ["rgb(35, 35, 35)", "rgb(25, 25, 25)", "rgb(255, 255, 255)", "gray"];
 var lightMode = ["rgb(255, 255, 255)", "rgb(125, 125, 125)", "rgb(0, 0, 0)", "rgb(25,25,25)"];
 
-
 function changeColorMode() {
     var currStyle = getComputedStyle(document.body);
+    var currMode = currStyle.getPropertyValue('--curr-color-mode').trim();
 
-    if(currStyle.getPropertyValue('--curr-color-mode').trim() == 'dark') {
+    if(currMode == 'dark') {
         console.log("Switching to light mode...");
 
         document.body.style.setProperty('--curr-color-mode', 'light');
