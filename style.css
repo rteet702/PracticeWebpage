@@ -1,3 +1,13 @@
+/* Global Color Values */
+
+:root {
+    --curr-color-mode: dark;
+    --curr-main-color: rgb(35, 35, 35);
+    --curr-secondary-color: rgb(25, 25, 25);
+    --curr-text-color: rgb(255, 255, 255);
+    --curr-scroll-color: gray;
+}
+
 /* CSS Reset */
 
 * {
@@ -5,13 +15,13 @@
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white;
+    color: var(--curr-text-color);
 }
 
 /* General Styling */
 
 body {
-    background-color: rgb(25, 25, 25) !important;
+    background-color: var(--curr-secondary-color) !important;
 }
 
 /* Layout */
@@ -36,7 +46,7 @@ body {
     height: 10vh;
     position: fixed;
 
-    background-color: rgb(35, 35, 35);
+    background-color: var(--curr-main-color);
     border-bottom: 1px solid gray;
 
     display: flex;
@@ -46,11 +56,8 @@ body {
 }
 
 .left-navbar {
-    height: 8vh;
+    height: 10vh;
     flex: 1;
-
-    margin-right: 0.5vw;
-    margin-left: 1vw;
 
     display: flex;
     align-items: center;
@@ -58,11 +65,27 @@ body {
 }
 
 .right-navbar {
-    height: 8vh;
+    height: 10vh;
     flex: 4.5;
 
-    margin-right: 2vw;
-    margin-left: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-navbar button {
+    width: 10vw;
+    height: 10vh;
+
+    margin-left: 1vw;
+    margin-right: 1vw;
+
+    background-color: gray;
+    border: none;
+}
+
+#display_mode {
+    background-color: darkcyan;
 }
 
 .sidebar {
@@ -73,7 +96,7 @@ body {
     top: 10vh;
     left: 0px;
 
-    background-color: rgb(35, 35, 35);
+    background-color: var(--curr-main-color);
 
     border-right: 1px solid gray;
     box-shadow: 0px 20px 20px 15px rgba(0,0,0,.25);
@@ -86,7 +109,7 @@ body {
     margin: 30px 10px 30px 10px;
     padding: 30px;
 
-    background-color: rgb(35, 35, 35);
+    background-color: var(--curr-main-color);
     border: 1px solid gray;
     border-radius: 10px;
 
@@ -101,12 +124,12 @@ body {
 
 ::-webkit-scrollbar-track {
     background-color: rgb(50, 50, 50);
-    border-left: 3px solid rgb(35, 35, 35);
-    border-right: 3px solid rgb(35, 35, 35);
+    border-left: 3px solid var(--curr-secondary-color);
+    border-right: 3px solid var(--curr-secondary-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: gray;
+    background: var(--curr-scroll-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -117,7 +140,6 @@ body {
 
 .titletext {
     font-size: 2.5vw;
-    color: white;
 }
 
 h1, h2 {
