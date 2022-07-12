@@ -24,7 +24,7 @@ body {
     background-color: var(--curr-secondary-color) !important;
 }
 
-/* Layout */
+/* Layout and Base Styling */
 
 .container {
     width: 75vw;
